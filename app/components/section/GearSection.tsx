@@ -1,8 +1,7 @@
 "use client";
-import CustomLists from "../components/list/CustomLists";
-import SectionHead from "../components/section/SectionHead";
-import PriceCard from "../components/card/PriceCard";
-import cycleC from "../assets/advertisehomeCycle.webp";
+import CustomLists from "../list/CustomLists";
+import SectionHead from "./SectionHead";
+import PriceCard from "../card/PriceCard";
 
 const data = [
   {
@@ -141,7 +140,7 @@ const GearSection = () => {
               <PriceCard
                 width={sonnex.title}
                 backgroundColor={sonnex.title}
-                cycle={cycleC}
+                cycle="/assets/advertisehomeCycle.webp"
                 typeCycle={sonnex.type}
                 title={sonnex.title}
                 price={sonnex.price}
