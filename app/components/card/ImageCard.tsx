@@ -10,10 +10,10 @@ interface IloadImageCard {
 const ImageCard = ({ cycleImage, contentName, bordering }: IloadImageCard) => {
   return (
     <div
-      className={`"rounded-sm hover:bg-sonex-cartBackGround overflow-hidden relative" 
+      className={`rounded-sm hover:bg-sonex-cartBackGround overflow-hidden relative
         ${bordering ? bordering : ""} `}
     >
-      <div className="relative">
+      <div className="relative group">
         <Image
           src={cycleImage}
           alt="image_cards_ "

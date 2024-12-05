@@ -1,73 +1,17 @@
-import aboutBannerImage from "/assets/about/about.webp";
-import ExploreSectionComponent from "../components/explore/ExploreSectionComponent";
 import MainImageBanner from "../components/banner/MainImageBanner";
-import exploreTextData from "@/lib/data/explorePageTextData.json";
-
-const eventPageData = exploreTextData;
+import AboutBodySection from "../components/section/AboutBodySection";
 
 const AboutPage = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto">
+    <main className="max-w-screen-xl mx-auto px-4 lg:p-0">
       <MainImageBanner
         pageName="ABOUT"
         pageSlug="NEXT STEP: ADVENTURE"
-        bannerImage={aboutBannerImage}
+        bannerImage="/assets/about/about.webp"
       />
-
-      {eventPageData?.slice(0, 1).map((eventsData) => (
-        <EventPageBody
-          title={eventsData.title}
-          descrition={eventsData.desctiption}
-          descritionOne={eventsData.descriptionOne}
-          key={eventsData.id}
-        />
-      ))}
-
-      {eventPageData?.slice(1, 2).map((eventsData) => (
-        <EventPageBody
-          title={eventsData.title}
-          descrition={eventsData.desctiption}
-          descritionOne={eventsData.descriptionOne}
-          key={eventsData.id}
-        />
-      ))}
-      <ExploreSectionComponent />
-
-      {eventPageData?.slice(2, 3).map((eventsData) => (
-        <EventPageBody
-          title={eventsData.title}
-          descrition={eventsData.desctiption}
-          descritionOne={eventsData.descriptionOne}
-          key={eventsData.id}
-        />
-      ))}
-    </div>
+      <AboutBodySection />
+    </main>
   );
 };
 
 export default AboutPage;
-
-interface IEventPageBody {
-  key: number;
-  title: string;
-  descrition: string;
-  descritionOne: string;
-}
-const EventPageBody = ({
-  key,
-  title,
-  descrition,
-  descritionOne,
-}: IEventPageBody) => {
-  return (
-    <>
-      <div className="flex flex-col justify-center items-end" key={key}>
-        <div className="py-40 w-2/3 ">
-          <h1 className="text-7xl font-sonexFamily font-extrabold">{title}</h1>
-          <p className="text-4xl font-snas py-4">{descrition}</p>
-          <p className="text-4xl font-snas">{descritionOne}</p>
-        </div>
-      </div>
-    </>
-  );
-};

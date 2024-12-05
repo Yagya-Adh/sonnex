@@ -82,26 +82,41 @@ const filterRoutes: IfilterRoutes[] = [
   },
   {
     id: 2,
-    path: "Bikes",
+    path: "Pedals",
     isActive: false,
   },
   {
     id: 3,
-    path: "Gear",
+    path: "Saddles",
     isActive: false,
   },
   {
     id: 4,
-    path: "Parts",
+    path: "Stems",
+    isActive: false,
+  },
+  {
+    id: 5,
+    path: "Suspension",
+    isActive: false,
+  },
+  {
+    id: 6,
+    path: "Tires",
+    isActive: false,
+  },
+  {
+    id: 7,
+    path: "Wheels",
     isActive: false,
   },
 ];
 
-const ShopAllPage = () => {
+const PartsSection = () => {
   return (
     <>
-      <div className="max-w-screen-2xl mx-auto">
-        <SectionHead sectionName="PRODUCTS" />
+      <div className="max-w-screen-xl mx-auto px-4 md:px-0">
+        <SectionHead sectionName="PARTS" />
 
         <div className="flex py-4 border-t border-b">
           {filterRoutes?.map((route) => (
@@ -135,4 +150,4 @@ const ShopAllPage = () => {
   );
 };
 
-export default ShopAllPage;
+export default PartsSection;

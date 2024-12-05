@@ -1,5 +1,3 @@
-"use client";
-
 const ShopPage = () => {
   return <>SHOP</>;
 };

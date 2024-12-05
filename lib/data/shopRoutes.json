@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "BIKE",
+    "path": "/bike",
     "innerRoute": [
       { "id": 1, "name": "City" },
       { "id": 2, "name": "Electric" },
@@ -14,6 +15,7 @@
   {
     "id": 2,
     "name": "PARTS",
+    "path": "/parts",
     "innerRoute": [
       { "id": 1, "name": "Pedals" },
       { "id": 2, "name": "Saddles" },
@@ -26,6 +28,7 @@
   {
     "id": 3,
     "name": "GEAR",
+    "path": "/gear",
     "innerRoute": [
       { "id": 1, "name": "Accessories" },
       { "id": 2, "name": "Bibshorts" },
@@ -38,10 +41,12 @@
   },
   {
     "id": 4,
-    "name": "SHOP ALL"
+    "name": "SHOP ALL",
+    "path": "/shop-all"
   },
   {
     "id": 5,
-    "name": "BRANDS"
+    "name": "BRANDS",
+    "path": "/brands"
   }
 ]

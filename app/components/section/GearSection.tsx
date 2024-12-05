@@ -2,6 +2,7 @@
 import CustomLists from "../components/list/CustomLists";
 import SectionHead from "../components/section/SectionHead";
 import PriceCard from "../components/card/PriceCard";
+import cycleC from "../assets/advertisehomeCycle.webp";
 
 const data = [
   {
@@ -74,6 +75,7 @@ interface IfilterRoutes {
   path: string;
   isActive: boolean;
 }
+
 const filterRoutes: IfilterRoutes[] = [
   {
     id: 1,
@@ -82,26 +84,46 @@ const filterRoutes: IfilterRoutes[] = [
   },
   {
     id: 2,
-    path: "Bikes",
+    path: "Accessories",
     isActive: false,
   },
   {
     id: 3,
-    path: "Gear",
+    path: "Bibshorts",
     isActive: false,
   },
   {
     id: 4,
-    path: "Parts",
+    path: "Gloves",
+    isActive: false,
+  },
+  {
+    id: 5,
+    path: "Helmets",
+    isActive: false,
+  },
+  {
+    id: 6,
+    path: "Jerseys",
+    isActive: false,
+  },
+  {
+    id: 7,
+    path: "Shoes",
+    isActive: false,
+  },
+  {
+    id: 8,
+    path: "Tech",
     isActive: false,
   },
 ];
 
-const ShopAllPage = () => {
+const GearSection = () => {
   return (
     <>
       <div className="max-w-screen-2xl mx-auto">
-        <SectionHead sectionName="PRODUCTS" />
+        <SectionHead sectionName="GEAR" />
 
         <div className="flex py-4 border-t border-b">
           {filterRoutes?.map((route) => (
@@ -119,7 +141,7 @@ const ShopAllPage = () => {
               <PriceCard
                 width={sonnex.title}
                 backgroundColor={sonnex.title}
-                cycle="/assets/advertisehomeCycle.webp"
+                cycle={cycleC}
                 typeCycle={sonnex.type}
                 title={sonnex.title}
                 price={sonnex.price}
@@ -135,4 +157,4 @@ const ShopAllPage = () => {
   );
 };
 
-export default ShopAllPage;
+export default GearSection;

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "linkPath": "https://www.facebook.com",
+    "name": "facebook",
+    "icon": "/assets/footer/facebook.svg"
+  },
+  {
+    "id": 2,
+    "linkPath": "https://www.instagram.com",
+    "name": "instagram",
+    "icon": "/assets/footer/instagram.svg"
+  },
+  {
+    "id": 3,
+    "linkPath": "https://www.twitter.com",
+    "name": "tweeter",
+    "icon": "/assets/footer/tweeter.svg"
+  },
+  {
+    "id": 4,
+    "linkPath": "https://www.youtube.com",
+    "name": "youtube",
+    "icon": "/assets/footer/youtube.svg"
+  }
+]

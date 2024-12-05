@@ -1,5 +1,4 @@
 "use client";
-
 interface ButtonProps {
   text: string;
   variant?:
@@ -14,80 +13,25 @@ interface ButtonProps {
 }
 
 const PillButton = ({ text, variant, padding }: ButtonProps) => {
-  if (variant == "primary") {
-    return (
-      <button
-        className={`rounded-full text-black border border-stone-200 hover:bg-sonex-cartBackGround items-center ${padding} `}
-      >
-        {text}
-      </button>
-    );
-  }
+  const variantClasses: { [key: string]: string } = {
+    primary:
+      "rounded-full text-black border border-stone-200 hover:bg-sonex-cartBackGround items-center",
+    "black-white":
+      "text-xl font-extrabold rounded-full font-sans bg-white group-hover:bg-black text-black border border-black hover:border-white group-hover:text-white items-center",
+    "angle-white": "text-white border border-white rounded-full items-center",
+    "primary-outline":
+      "text-black border border-black rounded-full hover:bg-sonex-cartBackGround items-center",
+    "primary-outline-focus":
+      "text-black border hover:border-black hover:bg-sonex-cartBackGround items-center flex justify-center rounded-full",
+    dark: "rounded-full text-black border border-black bg-stone-100 items-center",
+    danger: "text-rose-600 border-rose-600 border rounded-full items-center",
+    default:
+      "rounded-full border-stone-100 hover:bg-sonex-cartBackGround items-center",
+  };
 
-  if (variant == "black-white") {
-    return (
-      <button
-        className={`text-xl font-extrabold rounded-full font-sans  bg-white hover:bg-black text-black border border-black hover:border-white hover:text-white items-center ${padding} `}
-      >
-        {text}
-      </button>
-    );
-  }
+  const classes = variantClasses[variant || "default"];
 
-  if (variant == "angle-white") {
-    return (
-      <button
-        className={`" text-white border border-white rounded-full items-center" ${padding} `}
-      >
-        {text}
-      </button>
-    );
-  }
-  if (variant == "primary-outline") {
-    return (
-      <button
-        className={` text-black border border-black rounded-full hover:bg-sonex-cartBackGround items-center ${padding} `}
-      >
-        {text}
-      </button>
-    );
-  }
-
-  if (variant == "primary-outline-focus") {
-    return (
-      <button
-        className={` text-black border hover:border-black hover:bg-sonex-cartBackGround items-center flex justify-center rounded-full  ${padding} `}
-      >
-        {text}
-      </button>
-    );
-  }
-  if (variant == "dark") {
-    return (
-      <button
-        className={`rounded-full text-black border border-black bg-stone-100 items-center ${padding} `}
-      >
-        {text}
-      </button>
-    );
-  }
-
-  if (variant == "danger") {
-    return (
-      <button
-        className={` text-rose-600 border-rose-600  border rounded-full items-center ${padding} `}
-      >
-        {text}
-      </button>
-    );
-  }
-  return (
-    <button
-      className={`rounded-full border-stone-100 hover:bg-sonex-cartBackGround items-center ${padding} `}
-    >
-      {text}
-    </button>
-  );
+  return <button className={`${classes} ${padding || ""}`}>{text}</button>;
 };
 
 export default PillButton;

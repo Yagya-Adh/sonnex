@@ -1,7 +1,13 @@
 "use client";
-import Image from "next/image";
+import Link from "next/link";
 import footerDATA from "@/lib/data/footer.json";
-
+import {
+  FacebookIcon,
+  InstagramIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "@/app/icons";
+import footerSocialIconsData from "@/lib/data/socialIconData.json";
 interface Icommon {
   id: number;
   link?: string;
@@ -21,14 +27,9 @@ interface IdataFooter {
   id: number;
   column: IcolumnFooter;
 }
-
-const socialIcons = [
-  { id: 1, icon: "/assets/footer/facebook.svg" },
-  { id: 2, icon: "/assets/footer/instagram.svg" },
-  { id: 3, icon: "/assets/footer/tweeter.svg" },
-  { id: 4, icon: "/assets/footer/youtube.svg" },
-];
 const data: IdataFooter[] = footerDATA;
+const socialIcons = footerSocialIconsData;
+
 const FooterBody = () => {
   return (
     <div className="bg-black text-white">
@@ -36,7 +37,7 @@ const FooterBody = () => {
         {data?.slice(0, 1).map((footer) => (
           <div
             key={footer.id}
-            className="p-4 border border-stone-700 flex flex-col"
+            className="pb-20 p-4 border border-stone-700 flex flex-col"
           >
             {footer.column.head.lists.map((items) => (
               <h2
@@ -51,11 +52,11 @@ const FooterBody = () => {
         {data?.slice(1, 3).map((footer) => (
           <div
             key={footer.id}
-            className="p-4 border border-stone-700 flex flex-col"
+            className="pb-20 p-4 border border-stone-700 flex flex-col"
           >
             {footer.column.head.lists.map((items) => (
               <h3
-                className="text-xl font-bold font-sonexFamily tracking-tighter leading-10 "
+                className="text-xl font-bold font-sonexFamily tracking-tighter leading-10"
                 key={items.id}
               >
                 {items.name}
@@ -63,7 +64,7 @@ const FooterBody = () => {
             ))}
             {footer.column.head.subList?.map((subitem) => (
               <h3
-                className="text-white/60 transition-all ease-in-out duration-100 hover:text-stone-100 font-sans leading-7"
+                className="text-white/60 text-sm transition-all ease-in-out duration-100 hover:text-stone-100 font-sans leading-7"
                 key={subitem.id}
               >
                 {subitem.name}
@@ -77,14 +78,18 @@ const FooterBody = () => {
               className="border border-stone-800 items-center flex justify-center"
               key={icons.id}
             >
-              <div className="bg-stone-800 p-4 rounded-full items-center">
-                <Image
-                  src={icons.icon}
-                  alt="icons_Social_"
-                  className="w-full origin-center object-cover h-full z-20"
-                  width={50}
-                  height={50}
-                />
+              <div className="bg-stone-800 p-3 rounded-full items-center">
+                <Link href={icons.linkPath} target="_blank">
+                  {icons.name == "facebook" ? (
+                    <FacebookIcon className="h-8 w-8" />
+                  ) : icons.name == "tweeter" ? (
+                    <TwitterIcon className="h-8 w-8" />
+                  ) : icons.name == "instagram" ? (
+                    <InstagramIcon className="w-8 h-8" />
+                  ) : icons.name == "youtube" ? (
+                    <YoutubeIcon className="w-8 h-8" />
+                  ) : null}
+                </Link>
               </div>
             </div>
           ))}
