@@ -12,9 +12,12 @@ const config: Config = {
       "source-sans": "var(--font-source-sans)",
       "source-serif": "var(--font-source-serif)",
       sans: "Inter, sans-serif",
-      barlow: "Barlow Condensed, sans",
+      barlow: "var(--font-barlow)",
     },
     extend: {
+      backgroundImage: {
+        "home-hero": "url('/assets/home.webp')",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

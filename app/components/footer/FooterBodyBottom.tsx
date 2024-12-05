@@ -1,22 +1,24 @@
 "use client";
 import React from "react";
-import switcherland from "../../assets/footer/Switzerland.svg";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import PillButton from "../button/PillButton";
-import callUs from "../../assets/footer/call.svg";
-import emailUs from "../../assets/footer/email.svg";
 import { ArrowUpIcon } from "@heroicons/react/16/solid";
 interface IGridTwoData {
   id: number;
-  icon: StaticImageData;
+  icon: string;
   title: string;
   slug: string;
 }
 const GridTwoData: IGridTwoData[] = [
-  { id: 1, icon: callUs, title: "Call us", slug: "Mon-Fri: 10am - 7pm CET" },
+  {
+    id: 1,
+    icon: "/assets/footer/call.svg",
+    title: "Call us",
+    slug: "Mon-Fri: 10am - 7pm CET",
+  },
   {
     id: 2,
-    icon: emailUs,
+    icon: "/assets/footer/email.svg",
     title: "Email",
     slug: "We usually reply within 48 hours",
   },
@@ -24,7 +26,7 @@ const GridTwoData: IGridTwoData[] = [
 const FooterBodyBottom = () => {
   return (
     <div className="bg-black text-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-2xl mx-auto px-10 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-2xl mx-auto px-10">
         <GridOne />
         <GridTwo />
       </div>
@@ -35,7 +37,7 @@ export default FooterBodyBottom;
 
 const GridOneCalendar = () => {
   return (
-    <div className="flex items-center justify-center  ">
+    <div className="flex items-center justify-center">
       <div className="flex-col flex items-center p-2">
         <h1 className="font-bold text-xl">Mon-Fri </h1>
         <span>10am &#45; 7pm</span>
@@ -52,7 +54,7 @@ const GridOne = () => {
   return (
     <div className="border border-stone-700 p-20">
       <ColOne />
-      <div className="grid grid-cols-2 gap-3 items-center ">
+      <div className="grid grid-cols-2 gap-3 items-center">
         <PillButton
           text="Opening hours"
           variant="angle-white"
@@ -70,10 +72,16 @@ const ColOne = () => {
       <h1 className="font-sonexFamily font-bold text-3xl py-2">VISIT US</h1>
       <p className="flex items-end max-w-16 text-stone-500">
         Kingdom Park&#44; 80 4910 Lenzerheide
-        <Image src={switcherland} alt="switchzer_" className="size-3" />
+        <Image
+          src="/assets/footer/Switzerland.svg"
+          alt="switchzer_"
+          className="size-3 w-auto h-auto object-cover object-center"
+          width={40}
+          height={40}
+        />
       </p>
-      <span className="text-2xl border-b  w-2/4 py-1 items-center flex ">
-        Get direction <ArrowUpIcon className="rotate-45 size-6 " />{" "}
+      <span className="text-2xl border-b  w-2/4 py-1 items-center flex">
+        Get direction <ArrowUpIcon className="rotate-45 size-6" />{" "}
       </span>
     </div>
   );
@@ -89,7 +97,13 @@ const GridTwo = () => {
         >
           <div className="flex items-center">
             <div className="rounded-full bg-stone-700 p-4 me-3">
-              <Image src={footerList.icon} alt="" className=" size-5" />
+              <Image
+                src={footerList.icon}
+                alt="footer_icon"
+                className="h-full w-full object-cover object-center"
+                width={40}
+                height={40}
+              />
             </div>
             <div className="flex flex-col">
               <h1 className="text-xl  font-bold">{footerList.title}</h1>

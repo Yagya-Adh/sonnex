@@ -1,10 +1,6 @@
 "use client";
 import Image from "next/image";
 import footerDATA from "@/lib/data/footer.json";
-import FACEBOOKICON from "../../assets/footer/facebook.svg";
-import INSTAGRAMICON from "../../assets/footer/instagram.svg";
-import TWEETERICON from "../../assets/footer/tweeter.svg";
-import YOUTUBEICON from "../../assets/footer/youtube.svg";
 
 interface Icommon {
   id: number;
@@ -27,10 +23,10 @@ interface IdataFooter {
 }
 
 const socialIcons = [
-  { id: 1, icon: FACEBOOKICON },
-  { id: 2, icon: INSTAGRAMICON },
-  { id: 3, icon: TWEETERICON },
-  { id: 4, icon: YOUTUBEICON },
+  { id: 1, icon: "/assets/footer/facebook.svg" },
+  { id: 2, icon: "/assets/footer/instagram.svg" },
+  { id: 3, icon: "/assets/footer/tweeter.svg" },
+  { id: 4, icon: "/assets/footer/youtube.svg" },
 ];
 const data: IdataFooter[] = footerDATA;
 const FooterBody = () => {
@@ -79,7 +75,9 @@ const FooterBody = () => {
                 <Image
                   src={icons.icon}
                   alt="icons_Social_"
-                  className="size-8 z-20"
+                  className="w-full origin-center object-cover h-full z-20"
+                  width={50}
+                  height={50}
                 />
               </div>
             </div>

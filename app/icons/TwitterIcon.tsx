@@ -1,0 +1,26 @@
+import { IIconsInterface } from "../interface/IIconInterface";
+
+const TwitterIcon = ({ className }: IIconsInterface) => {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" className={className}>
+      <g clipPath="url(#clip0_6441_3927)">
+        <path
+          d="M15.1757 1.86475H17.9357L11.9058 8.75725L19 18.1345H13.4455L9.0955 12.4465L4.117 18.1345H1.3555L7.8055 10.762L1 1.8655H6.6955L10.6277 7.0645L15.1757 1.86475ZM14.2075 16.483H15.7368L5.8645 3.43H4.2235L14.2075 16.483Z"
+          fill="white"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_6441_3927">
+          <rect
+            width="18"
+            height="18"
+            fill="white"
+            transform="translate(1 1)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export default TwitterIcon;

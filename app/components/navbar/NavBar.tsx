@@ -38,7 +38,7 @@ const NavBar = () => {
     <>
       <nav className="sticky top-0 left-0 z-20">
         <div className="bg-white border-b-sonex-borderCol relative">
-          <div className="max-w-screen-xl mx-auto flex items-center justify-between border-b px-4 ">
+          <div className="max-w-screen-xl mx-auto flex items-center justify-between border-b px-4 lg:p-0">
             <div className="flex items-center justify-between py-4 md:p-0 gap-10 shrink-0">
               <div className="flex items-center justify-between">
                 <div onClick={handleSideBarPop} role="button">
