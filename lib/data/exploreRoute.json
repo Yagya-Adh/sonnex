@@ -1,7 +1,7 @@
 [
-  { "id": 1, "name": "ABOUT" },
-  { "id": 2, "name": "SERVICES" },
-  { "id": 3, "name": "BLOG" },
-  { "id": 4, "name": "EVENTS" },
-  { "id": 5, "name": "FAQS" }
+  { "id": 1, "name": "ABOUT", "linkPath": "/about" },
+  { "id": 2, "name": "SERVICES", "linkPath": "/services" },
+  { "id": 3, "name": "BLOG", "linkPath": "/blog" },
+  { "id": 4, "name": "EVENTS", "linkPath": "/events" },
+  { "id": 5, "name": "FAQS", "linkPath": "/faq" }
 ]

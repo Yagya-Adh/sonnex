@@ -1,20 +1,24 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import sonexLogo from "../../assets/SONNEX.svg";
-import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { PlusIcon } from "@heroicons/react/16/solid";
 import ToggleButton from "../button/ToggleButton";
 import Link from "next/link";
 import PillButton from "../button/PillButton";
 import exploreRoutes from "@/lib/data/exploreRoute.json";
 import shopRoutes from "@/lib/data/shopRoutes.json";
+import Anchor from "../anchor/Anchor";
+import { BagIcon } from "@/app/icons";
+import Cart from "../cart/Cart";
+import SideBar from "../sidebar/SideBar";
 const shopNav = shopRoutes;
 const exploreNav = exploreRoutes;
 
 const NavBar = () => {
   const [openFirst, setOpenFirst] = useState(false);
   const [openSecond, setOpenSecond] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
+  const [sideBarOpen, setSideBarOpen] = useState(false);
 
   const openNAVBOXFirst = () => {
     setOpenFirst(!openFirst);
@@ -22,16 +26,30 @@ const NavBar = () => {
   const openNAVBOXSecond = () => {
     setOpenSecond(!openSecond);
   };
+
+  const handleCartPop = () => {
+    setCartOpen(!cartOpen);
+  };
+  const handleSideBarPop = () => {
+    setSideBarOpen(!cartOpen);
+  };
+
   return (
     <>
-      <nav className="sticky top-0 z-20">
+      <nav className="sticky top-0 z-20 left-0">
         <div className=" bg-white border-b-sonex-borderCol">
           <div className="max-w-screen-2xl mx-auto flex items-center justify-between border-b  px-10  w-full">
             <div className=" flex items-center justify-between  ">
               <div className="flex items-center justify-between">
-                <ToggleButton />
+                <ToggleButton handleSideBarPop={handleSideBarPop} />
                 <Link href={"/"}>
-                  <Image src={sonexLogo} className="" alt="sonex_" />
+                  <Image
+                    src="/assets/SONNEX.svg"
+                    className=""
+                    alt="sonex_logo"
+                    height={120}
+                    width={120}
+                  />
                 </Link>
               </div>
               <ul className="flex items-center font-sans px-6 font-sonexFamily tracking-tighter ms-5  justify-between p-1">
@@ -51,17 +69,19 @@ const NavBar = () => {
                 </button>
               </ul>
             </div>
-
             <div className="flex items-center">
-              <div className="bg-sonex-cartBackGround rounded-full flex items-center relative p-4 justify-center">
-                <span className="bg-rose-600 absolute -top-1 -right-3 rounded-full text-white text-sm p-1 px-2">
+              <button
+                onClick={handleCartPop}
+                type="button"
+                className="bg-sonex-cartBackGround rounded-full flex items-center relative p-3 justify-center"
+              >
+                <span className="bg-rose-600 absolute -top-1 -right-3 rounded-full text-white text-sm text-center h-6 w-6 p-0.5">
                   {0}
                 </span>
-                <ShoppingBagIcon className="text-black size-6" />
-              </div>
+                <BagIcon className="h-5 w-5 text-black" />
+              </button>
             </div>
           </div>
-
           {openFirst && (
             <div className="relative bg-white">
               <div className="max-w-screen-2xl py-5 px-10 mx-auto flex items-center justify-between">
@@ -106,10 +126,10 @@ const NavBar = () => {
               <div className="grid grid-cols-3 gap-4">
                 {exploreNav?.map((explore) => (
                   <div key={explore.id} className="">
-                    <PillButton
+                    <Anchor
                       text={explore.name}
                       padding="font-extrabold text-7xl py-10 px-4 items-center"
-                      variant="primary-outline-focus"
+                      link={explore.linkPath}
                     />
                   </div>
                 ))}
@@ -117,6 +137,16 @@ const NavBar = () => {
             </div>
           )}
         </div>
+        {cartOpen && (
+          <div className="fixed top-0 right-0 inset-0 h-full w-full">
+            <Cart handleCartPop={handleCartPop} />
+          </div>
+        )}{" "}
+        {sideBarOpen && (
+          <div className="fixed top-0 left-0 inset-0 h-full w-full">
+            <SideBar handleSideBarPop={handleSideBarPop} />
+          </div>
+        )}
       </nav>
     </>
   );

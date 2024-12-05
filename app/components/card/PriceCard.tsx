@@ -1,11 +1,10 @@
-"use client";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import PillButton from "../button/PillButton";
 
 interface IPriceCardProp {
   width?: string;
   backgroundColor?: string;
-  cycle: StaticImageData;
+  cycle: string;
   typeCycle: string;
   title: string;
   price: string;
@@ -26,9 +25,8 @@ const PriceCard = ({
 }: IPriceCardProp) => {
   return (
     <div
-      className={`"rounded-sm border hover:bg-sonex-cartBackGround overflow-hidden "  ${
-        width && width
-      } ${backgroundColor && backgroundColor}`}
+      className={`rounded-sm border hover:bg-sonex-cartBackGround overflow-hidden 
+        ${width && width} ${backgroundColor && backgroundColor}`}
     >
       <div className="px-4 pt-2 py-10">
         <h1 className="font-bold">{title}</h1>
@@ -36,8 +34,10 @@ const PriceCard = ({
       </div>
       <Image
         src={cycle}
-        alt="card_arival_"
-        className=" translate-y-0 hover:-translate-y-1 ease-in-out transition-all duration-700 "
+        alt={`${title}.card_arival_`}
+        className=" translate-y-0 hover:-translate-y-1 ease-in-out transition-all duration-700 h-full w-full"
+        height={400}
+        width={400}
       />
       <div className="px-4 pb-2 py-10">
         <span className=" line-through text-sonex-blackBackGroundCol">

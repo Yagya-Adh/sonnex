@@ -1,10 +1,10 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface IMainImageBanner {
   pageName: string;
   pageSlug: string;
-  bannerImage: StaticImageData;
+  bannerImage: string;
 }
 
 const MainImageBanner = ({
@@ -20,7 +20,13 @@ const MainImageBanner = ({
             {pageName}{" "}
           </h1>
         </div>
-        <Image src={bannerImage} className="" alt="banner_" />
+        <Image
+          src={bannerImage}
+          className="h-full w-full object-center object-cover"
+          width={400}
+          height={400}
+          alt="banner_"
+        />
         <div className="absolute bottom-4 right-4">
           <h2 className="text-3xl text-white font-extrabold font-sans">
             {pageSlug}{" "}

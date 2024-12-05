@@ -1,13 +1,11 @@
-"use client";
 import MainImageBanner from "../components/banner/MainImageBanner";
-import eventBannerImage from "../assets/event/eventsimage.webp";
 import CustomLists from "../components/list/CustomLists";
 const ServicesPage = () => {
   return (
     <>
       <div className="max-w-screen-2xl mx-auto">
         <MainImageBanner
-          bannerImage={eventBannerImage}
+          bannerImage="/assets/event/eventsimage.webp"
           pageName="EVENTS"
           pageSlug="IMMERSE YOURSELF IN THE WORLD OF CYCLING!"
         />

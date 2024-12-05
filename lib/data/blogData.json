@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "describe": "How to start mountain biking in 6 steps",
+    "blogType": "Tips & Advices",
+    "image": "/assets/blog/routes.webp",
+    "postDate": "Jun 19, 2024"
+  },
+  {
+    "id": 2,
+    "describe": "The charm of riding through Switzerland",
+    "blogType": "Routes",
+    "image": "/assets/blog/specializedS-Work.webp",
+    "postDate": "May 16, 2024"
+  },
+  {
+    "id": 3,
+    "describe": " Review: Specialized S-Works Tarmak SL8",
+    "blogType": "Reviews",
+    "image": "/assets/blog/howto_mountain.webp",
+    "postDate": "May 7, 2024"
+  },
+  {
+    "id": 4,
+    "describe": "Verbier is about to become the mecca of cycling",
+    "blogType": "News",
+    "image": "/assets/blog/verbier.webp",
+    "postDate": "Apr 18, 2024"
+  },
+  {
+    "id": 5,
+    "describe": "City bike vs road bike: differences and similarities",
+    "blogType": "Bike 101",
+    "image": "/assets/blog/cityBike.webp",
+    "postDate": "Apr 9, 2024"
+  },
+  {
+    "id": 6,
+    "describe": "Tour de France 2024: route, stages, and TV",
+    "blogType": "News",
+    "image": "/assets/blog/underStandindTrackCycle.webp",
+    "postDate": "Mar 22, 2024"
+  },
+  {
+    "id": 7,
+    "describe": "Understanding track cycling events: an in-depth exploration ",
+    "blogType": "Bike 101",
+    "image": "/assets/blog/underStandingtrack.webp",
+    "postDate": "Mar 4, 2024"
+  },
+
+  {
+    "id": 8,
+    "describe": "Verbier is about to become the mecca of cycling",
+    "blogType": "News",
+    "image": "/assets/blog/verbier.webp",
+    "postDate": "Apr 18, 2024"
+  },
+  {
+    "id": 9,
+    "describe": "City bike vs road bike: differences and similarities",
+    "blogType": "Bike 101",
+    "image": "/assets/blog/cityBike.webp",
+    "postDate": "Apr 9, 2024"
+  },
+  {
+    "id": 10,
+    "describe": "Tour de France 2024: route, stages, and TV",
+    "blogType": "News",
+    "image": "/assets/blog/routes.webp",
+    "postDate": "Mar 22, 2024"
+  },
+  {
+    "id": 11,
+    "describe": "Understanding track cycling events: an in-depth exploration ",
+    "blogType": "Bike 101",
+    "image": "/assets/blog/underStandindTrackCycle.webp",
+    "postDate": "Mar 4, 2024"
+  }
+]

@@ -1,8 +1,7 @@
-"use client";
-import aboutBannerImage from "../assets/about/about.webp";
+import aboutBannerImage from "/assets/about/about.webp";
 import ExploreSectionComponent from "../components/explore/ExploreSectionComponent";
-import exploreTextData from "../../explorePageTextData.json";
 import MainImageBanner from "../components/banner/MainImageBanner";
+import exploreTextData from "@/lib/data/explorePageTextData.json";
 
 const eventPageData = exploreTextData;
 

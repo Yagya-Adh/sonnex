@@ -1,9 +1,9 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import PillButton from "../button/PillButton";
 
 interface IloadImageCard {
-  cycleImage: StaticImageData;
+  cycleImage: string;
   contentName: string;
   bordering?: string;
 }
@@ -17,7 +17,9 @@ const ImageCard = ({ cycleImage, contentName, bordering }: IloadImageCard) => {
         <Image
           src={cycleImage}
           alt="image_cards_ "
-          className=" scale-110 hover:scale-150 ease-in-out transition-all duration-700"
+          width={400}
+          height={400}
+          className="w-full h-full scale-110 hover:scale-150 ease-in-out transition-all duration-700"
         />
         <div className="absolute z-10 bottom-4 left-4">
           <PillButton
