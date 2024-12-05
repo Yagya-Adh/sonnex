@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "ABOUT" },
+  { "id": 2, "name": "SERVICES" },
+  { "id": 3, "name": "BLOG" },
+  { "id": 4, "name": "EVENTS" },
+  { "id": 5, "name": "FAQS" }
+]

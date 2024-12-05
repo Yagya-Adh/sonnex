@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "BIKE",
+    "innerRoute": [
+      { "id": 1, "name": "City" },
+      { "id": 2, "name": "Electric" },
+      { "id": 3, "name": "Gravel" },
+      { "id": 4, "name": "Kids" },
+      { "id": 5, "name": "Mountain" },
+      { "id": 6, "name": "Road" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "PARTS",
+    "innerRoute": [
+      { "id": 1, "name": "Pedals" },
+      { "id": 2, "name": "Saddles" },
+      { "id": 3, "name": "Stems" },
+      { "id": 4, "name": "Suspension" },
+      { "id": 5, "name": "Tires" },
+      { "id": 6, "name": "Wheels" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "GEAR",
+    "innerRoute": [
+      { "id": 1, "name": "Accessories" },
+      { "id": 2, "name": "Bibshorts" },
+      { "id": 3, "name": "Gloves" },
+      { "id": 4, "name": "Helmets" },
+      { "id": 5, "name": "Jerseys" },
+      { "id": 6, "name": "Shoes" },
+      { "id": 7, "name": "Tech" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "SHOP ALL"
+  },
+  {
+    "id": 5,
+    "name": "BRANDS"
+  }
+]
