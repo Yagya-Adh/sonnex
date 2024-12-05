@@ -1,8 +1,8 @@
 "use client";
 import shopRoutes from "@/lib/data/shopRoutes.json";
-import exploreRoutes from "@/lib/data/exploreRoute.json";
+// import exploreRoutes from "@/lib/data/exploreRoute.json";
 const shopNav = shopRoutes;
-const exploreNav = exploreRoutes;
+// const exploreNav = exploreRoutes;
 
 const SideBar = () => {
   return (
