@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import footerDATA from "../../footer.json";
+import footerDATA from "@/lib/data/footer.json";
 import FACEBOOKICON from "../../assets/footer/facebook.svg";
 import INSTAGRAMICON from "../../assets/footer/instagram.svg";
 import TWEETERICON from "../../assets/footer/tweeter.svg";

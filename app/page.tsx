@@ -32,7 +32,6 @@ const data = [
     new: "New",
     sale: "Sale",
   },
-
   {
     id: 4,
     title: "  S-Works Turbo Levo SL Carbon - Rusted Red / Redwood",
@@ -42,7 +41,6 @@ const data = [
     new: "New",
     sale: "Sale",
   },
-
   {
     id: 5,
     title: "Turbo Vado 4.0 - Cast Black",

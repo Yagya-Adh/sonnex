@@ -7,8 +7,8 @@ import { PlusIcon } from "@heroicons/react/16/solid";
 import ToggleButton from "../button/ToggleButton";
 import Link from "next/link";
 import PillButton from "../button/PillButton";
-import exploreRoutes from "../../../exploreRoute.json";
-import shopRoutes from "../../../shopRoutes.json";
+import exploreRoutes from "@/lib/data/exploreRoute.json";
+import shopRoutes from "@/lib/data/shopRoutes.json";
 const shopNav = shopRoutes;
 const exploreNav = exploreRoutes;
 
