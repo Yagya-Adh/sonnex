@@ -1,7 +1,7 @@
 "use client";
-import CustomLists from "../components/list/CustomLists";
-import SectionHead from "../components/section/SectionHead";
-import PriceCard from "../components/card/PriceCard";
+import CustomLists from "../list/CustomLists";
+import SectionHead from "./SectionHead";
+import PriceCard from "../card/PriceCard";
 
 const data = [
   {
@@ -117,7 +117,6 @@ const PartsSection = () => {
     <>
       <div className="max-w-screen-xl mx-auto px-4 md:px-0">
         <SectionHead sectionName="PARTS" />
-
         <div className="flex py-4 border-t border-b">
           {filterRoutes?.map((route) => (
             <CustomLists
