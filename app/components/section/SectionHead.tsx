@@ -12,18 +12,19 @@ const SectionHead = ({
   sideDescription,
 }: ISectionHead) => {
   return (
-    <section className="max-w-screen-xl mx-auto py-5 px-4 lg:p-0">
+    <section className="max-w-screen-xl mx-auto py-5 mt-10 px-4 lg:p-0">
       <div
         className={`flex flex-col items-start sm:flex-row sm:justify-between sm:items-end 
           ${sideDescription ? "justify-start" : ""} `}
       >
-        <h1 className="text-4xl lg:text-6xl font-extrabold font-sonexFamily tracking-tighter max-w-20 ">
+        <h1 className="text-4xl lg:text-8xl font-bold font-barlow tracking-tight max-w-20">
           {sectionName}
         </h1>
         {linkName && (
           <button
             className={`font-bold  underline  text-xl 
-              ${linkTextColor ? linkTextColor : "text-black"}`}
+            ${linkTextColor ? linkTextColor : "text-black"}
+            `}
           >
             {linkName}
           </button>

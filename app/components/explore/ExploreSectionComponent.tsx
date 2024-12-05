@@ -15,7 +15,7 @@ const ExploreSectionComponent = () => {
   return (
     <section className="py-10">
       <SectionHead sectionName="EXPLORE" />
-      <div className="max-w-screen-2xl mx-auto mb-5 px-4 lg:p-0">
+      <div className="max-w-screen-xl mx-auto mb-5 px-4 lg:p-0">
         <div className="grid gird-cols-1 md:grid-cols-4 gap-4">
           {exploreData?.slice(0, 4).map((sonnex) => (
             <div key={sonnex.id}>
@@ -27,7 +27,7 @@ const ExploreSectionComponent = () => {
           ))}
         </div>
       </div>
-      <div className="max-w-screen-2xl mx-auto px-4">
+      <div className="max-w-screen-xl mx-auto px-4 lg:p-0">
         <div className="grid gird-cols-1 md:grid-cols-3 gap-4">
           {exploreData?.slice(4, 8).map((sonnex) => (
             <div key={sonnex.id}>

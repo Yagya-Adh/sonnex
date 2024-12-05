@@ -6,14 +6,12 @@ import FooterEnd from "./FooterEnd";
 
 const Footer = () => {
   return (
-    <>
-      <footer>
-        <FooterForm />
-        <FooterBody />
-        <FooterBodyBottom />
-        <FooterEnd />
-      </footer>
-    </>
+    <footer>
+      <FooterForm />
+      <FooterBody />
+      <FooterBodyBottom />
+      <FooterEnd />
+    </footer>
   );
 };
 

@@ -26,7 +26,7 @@ const GridTwoData: IGridTwoData[] = [
 const FooterBodyBottom = () => {
   return (
     <div className="bg-black text-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-2xl mx-auto px-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto px-4 lg:p-0">
         <GridOne />
         <GridTwo />
       </div>
@@ -52,7 +52,7 @@ const GridOneCalendar = () => {
 
 const GridOne = () => {
   return (
-    <div className="border border-stone-700 p-20">
+    <div className="border border-stone-700 p-4">
       <ColOne />
       <div className="grid grid-cols-2 gap-3 items-center">
         <PillButton
@@ -106,7 +106,7 @@ const GridTwo = () => {
               />
             </div>
             <div className="flex flex-col">
-              <h1 className="text-xl  font-bold">{footerList.title}</h1>
+              <h1 className="text-xl font-bold">{footerList.title}</h1>
               <p className="text-stone-400 hover:text-white">
                 {footerList.slug}
               </p>

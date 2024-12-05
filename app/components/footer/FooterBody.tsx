@@ -32,40 +32,46 @@ const data: IdataFooter[] = footerDATA;
 const FooterBody = () => {
   return (
     <div className="bg-black text-white">
-      <div className="grid grid-cols-2 lg:grid-cols-4 max-w-screen-2xl mx-auto">
+      <div className="grid grid-cols-2 lg:grid-cols-4 max-w-screen-xl mx-auto">
         {data?.slice(0, 1).map((footer) => (
-          <div key={footer.id} className="p-20 border border-stone-700">
+          <div
+            key={footer.id}
+            className="p-4 border border-stone-700 flex flex-col"
+          >
             {footer.column.head.lists.map((items) => (
-              <h1
-                className="text-2xl font-bold leading-10 font-sonexFamily tracking-tighter text-stone-500 transition-all ease-in-out duration-100  hover:text-stone-100 font-sans"
+              <h2
+                className="text-2xl font-extrabold font-inter tracking-tighter text-white/60 transition-all ease-in-out duration-100  hover:text-stone-100"
                 key={items.id}
               >
                 {items.name}
-              </h1>
+              </h2>
             ))}
           </div>
         ))}
         {data?.slice(1, 3).map((footer) => (
-          <div key={footer.id} className="p-20 border border-stone-700">
+          <div
+            key={footer.id}
+            className="p-4 border border-stone-700 flex flex-col"
+          >
             {footer.column.head.lists.map((items) => (
-              <h1
-                className="text-3xl font-bold font-sonexFamily tracking-tighter leading-10 "
+              <h3
+                className="text-xl font-bold font-sonexFamily tracking-tighter leading-10 "
                 key={items.id}
               >
                 {items.name}
-              </h1>
+              </h3>
             ))}
             {footer.column.head.subList?.map((subitem) => (
-              <h1
-                className="text-stone-500 transition-all ease-in-out duration-100  hover:text-stone-100 font-sans leading-7 text-xl"
+              <h3
+                className="text-white/60 transition-all ease-in-out duration-100 hover:text-stone-100 font-sans leading-7"
                 key={subitem.id}
               >
                 {subitem.name}
-              </h1>
+              </h3>
             ))}
           </div>
         ))}
-        <div className="grid  grid-cols-2">
+        <div className="grid grid-cols-2">
           {socialIcons.map((icons) => (
             <div
               className="border border-stone-800 items-center flex justify-center"
