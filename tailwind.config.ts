@@ -18,7 +18,6 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-
         sonex: {
           prime: "#d53c32",
           primeBackGround: "#0000000a",
@@ -28,8 +27,6 @@ const config: Config = {
           footerFormBackGround: "#3256d5",
           mutedtText: "#0009",
         },
-
-        // Barlow Condensed, sans-serif
       },
     },
   },

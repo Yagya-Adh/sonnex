@@ -1,18 +1,18 @@
 "use client";
-import Link from "next/link";
-import { XmarkIcon } from "@/app/icons";
+import shopRoutes from "@/lib/data/shopRoutes.json";
+import exploreRoutes from "@/lib/data/exploreRoute.json";
+const shopNav = shopRoutes;
+const exploreNav = exploreRoutes;
 
-interface IASideProp {
-  handleSideBarPop: () => void;
-}
-const SideBar = ({ handleSideBarPop }: IASideProp) => {
+const SideBar = () => {
   return (
-    <aside className="bg-white h-screen w-2/3 sm:w-1/3 p-4">
-      <div className="flex flex-row items-start justify-between ">
-        <Link href="/">Lorem ipsum dolor</Link>{" "}
-        <button type="button" onClick={handleSideBarPop}>
-          <XmarkIcon className="h-6 w-6 fill-black" />
-        </button>
+    <aside className="bg-white h-screen w-2/3 sm:w-1/3">
+      <div className="flex flex-col items-start justify-between px-4">
+        <ul className="">
+          {shopNav?.map((shop) => (
+            <li key={shop.id}>{shop.name}</li>
+          ))}
+        </ul>
       </div>
     </aside>
   );

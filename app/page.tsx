@@ -20,14 +20,15 @@ const data: IHomeInterface[] = homePageData;
 export default function Home() {
   return (
     <main>
-      <MainBanner />
+      {/* <MainBanner />
+       */}
       <SectionHead
         sectionName="NEW ARRIVALS"
         linkName="Shop all"
         linkTextColor="text-rose-600"
       />
-      <div className="max-w-screen-2xl mx-auto px-4 lg:px-0">
-        <div className="grid gird-cols-1 md:grid-cols-3">
+      <div className="max-w-screen-2xl mx-auto px-4">
+        <div className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {data?.map((sonnex) => (
             <div key={sonnex.id}>
               <PriceCard

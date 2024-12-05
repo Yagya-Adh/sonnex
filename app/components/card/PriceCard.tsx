@@ -43,10 +43,8 @@ const PriceCard = ({
         <span className=" line-through text-sonex-blackBackGroundCol">
           {actualPrice && actualPrice}
         </span>
-
         <div className="flex justify-between">
           <h2 className="text-bold">{price && price}</h2>
-
           <div>
             {New && (
               <PillButton text={New} variant="primary-outline" padding="px-2" />

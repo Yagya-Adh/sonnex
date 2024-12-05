@@ -1,28 +1,20 @@
 import { useState } from "react";
+import { BarIcon, XmarkIcon } from "@/app/icons";
 
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
-
-const ToggleButton = ({ handleSideBarPop }) => {
+const ToggleButton = () => {
   const [isClick, setIsClick] = useState(false);
 
   const handleClick = () => {
     setIsClick(!isClick);
-    handleSideBarPop();
   };
   return (
-    <>
-      <button
-        type="button"
-        className="flex me-4 lg:hidden"
-        onClick={handleClick}
-      >
-        {isClick ? (
-          <XMarkIcon className="text-rose-600 size-8" />
-        ) : (
-          <Bars3Icon className="text-rose-600 size-8" />
-        )}
-      </button>
-    </>
+    <button type="button" className="flex me-4 lg:hidden" onClick={handleClick}>
+      {isClick ? (
+        <XmarkIcon className="fill-sonex-prime size-8" />
+      ) : (
+        <BarIcon className="fill-sonex-prime size-8" />
+      )}
+    </button>
   );
 };
 

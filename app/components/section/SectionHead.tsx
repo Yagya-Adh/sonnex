@@ -12,12 +12,12 @@ const SectionHead = ({
   sideDescription,
 }: ISectionHead) => {
   return (
-    <div className="max-w-screen-2xl mx-auto py-5 ">
+    <div className="max-w-screen-2xl mx-auto py-5 px-4">
       <div
-        className={`flex justify-between     items-center   
+        className={`flex justify-between items-end   
           ${sideDescription ? "justify-start" : ""} `}
       >
-        <h1 className="text-8xl py-4 font-extrabold font-sonexFamily tracking-tighter max-w-20 ">
+        <h1 className="text-5xl lg:text-8xl font-extrabold font-sonexFamily tracking-tighter max-w-20 ">
           {sectionName}
         </h1>
 
